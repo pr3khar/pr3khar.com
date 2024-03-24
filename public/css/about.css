@@ -1,0 +1,348 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@1,200,500,300,600,400,700&display=swap");
+@import url("https://use.typekit.net/zmy0cob.css");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1,700,500,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gulzar&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0px;
+}
+
+:root {
+  --theme-light: #fdfdfd;
+  --theme-blue: #e0e7f1;
+
+  --blue: #3b8eef;
+
+  --pink: #fc466d;
+  --pink-2: #ff7676;
+  --pink-light: #ffd6d6;
+
+  --yellow: #ffd82b;
+  --yellow-2: #ffd976;
+  --yellow-light: #fff3d6;
+
+  --green: #64ffa2;
+
+  --dark-bg: rgb(22, 22, 22);
+  --light-bg: #ffffff;
+  --grey-bg: #f4f4f5;
+
+  --text: #a2a2a2;
+  --text-dark: #1d1e26;
+  --text-med: #636363;
+
+  --text-light: #c0c0c0;
+  --text-vlight: #fffffb;
+
+  --upstox: #551e90;
+  --openhouse: #ef5c34;
+
+  --easing: cubic-bezier(0.68, 0.28, 0.82, 0.64);
+  --easing-slick: cubic-bezier(0.02, 0.98, 0.65, 1.15);
+}
+
+body {
+  font-family: "General Sans", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: var(--text-dark);
+}
+
+.space-big {
+  width: 100%;
+  height: 200px;
+}
+
+#about {
+  margin-bottom: 120px;
+}
+
+.filler {
+  width: 100%;
+  height: 150px;
+}
+
+.hero {
+  width: 90%;
+  max-width: 1100px;
+  height: 550px;
+  margin: auto;
+  background-image: url(../assets/me.jpg);
+  background-size: 100% auto;
+  border-radius: 8px;
+}
+
+.block {
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 75px;
+}
+
+.interests {
+  margin-top: 100px;
+}
+
+.interests-title {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 48px;
+  font-size: 2.5rem;
+  font-weight: 550;
+}
+
+.interests-text {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interests-title bold {
+  color: var(--text-light);
+}
+
+.small {
+  font-size: 2rem;
+  margin-bottom: -12px;
+}
+
+.about-desc {
+  margin-top: 6px;
+  width: 100%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-med);
+  letter-spacing: 0.4px;
+}
+
+.supporting {
+  font-size: 0.9rem;
+}
+
+#bold {
+  font-size: 1.25rem;
+  font-weight: 550;
+  color: var(--text-dark);
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+}
+
+.mono-title {
+  font-family: "Gulzar", serif;
+  font-weight: 400;
+  width: 100%;
+  margin: auto;
+  margin-top: 16px;
+  max-width: 700px;
+  font-size: 2.5rem;
+  color: var(--text-dark);
+}
+
+.experiences {
+  margin-top: 80px;
+}
+
+.interests-block {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  max-width: 700px;
+}
+
+.resume {
+  width: 90%;
+  max-width: 700px;
+  padding: 32px 16px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: var(--text-med);
+  margin-bottom: 24px;
+  border: 2px solid #ececec;
+  border-radius: 8px;
+}
+
+.resume a {
+  text-decoration: underline;
+  font-weight: 550;
+  color: var(--text-dark);
+}
+
+.exp-text {
+  font-weight: 350;
+  width: 90%;
+  margin: auto;
+  max-width: 700px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+  color: var(--text-med);
+}
+
+.exp-text a {
+  text-decoration: none;
+  color: var(--text-med-dark);
+  font-weight: 550;
+}
+
+.exp-text svg {
+  height: 30px;
+  margin-bottom: -8px;
+}
+
+.interests-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.interest-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+  height: 220px;
+  padding: 12px;
+  border: 2px solid #ececec;
+  border-radius: 8px;
+}
+
+.main-text {
+  font-weight: 550;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.bucket-section {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.bucket-list {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 8px;
+  margin-left: -28px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bucket-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 320px;
+  margin-bottom: 24px;
+}
+
+.check-box {
+  width: 24px;
+  height: 24px;
+}
+
+.bucket-row i {
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+.bucket-row p {
+  font-size: 1.15rem;
+  margin-left: 8px;
+  color: var(--text-med);
+}
+
+#done {
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 800px) {
+  .mono-title {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 32px;
+  }
+
+  .hero {
+    width: 90%;
+    max-width: 1100px;
+    height: 400px;
+    margin: auto;
+    background-image: url(../assets/me.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+  }
+
+  .block {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 75px;
+  }
+
+  .header {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .small {
+    font-size: 1.25rem;
+    margin-bottom: 1px;
+  }
+
+  .interests-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.1px;
+  }
+
+  .interests-text {
+    height: 70px;
+  }
+
+  .interest-box {
+    width: 100%;
+    height: 175px;
+    margin-top: 32px;
+  }
+
+  .bucket-list {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bucket-row {
+    width: 100%;
+  }
+}

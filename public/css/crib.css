@@ -1,0 +1,92 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@1,200,500,300,600,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0px;
+}
+
+.crib-project-no {
+  font-size: 2rem;
+  font-weight: 450;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  color: var(--text);
+}
+
+#project-after {
+  margin-top: 120px;
+}
+
+.crib-project-header {
+  font-size: 3.5rem;
+  font-weight: 550;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.crib-project-header img {
+  margin-left: 8px;
+  margin-bottom: -4px;
+}
+
+.project-hero {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.project-hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.project-key {
+  font-size: 2rem;
+  font-weight: 550;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 60px;
+  color: var(--upstox);
+}
+
+.project-image {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.project-image img {
+  border-radius: 12px;
+}
+
+.crib-project-header svg {
+  font-size: 5rem;
+}
+
+.project-text {
+  margin-top: 40px;
+}
+
+#bold {
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 2;
+}
+
+.project-image-row {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}

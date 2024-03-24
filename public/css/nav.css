@@ -1,0 +1,81 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@1,200,500,300,600,400,700&display=swap");
+@import url("https://use.typekit.net/zmy0cob.css");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0px;
+}
+
+nav {
+  font-family: "General Sans", sans-serif;
+  position: fixed;
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 100;
+}
+
+.body-container {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 14px;
+  background-color: rgba(235, 235, 235, 0.2);
+  padding: 12px;
+  gap: 16px;
+  border: 1px solid rgba(215, 215, 215, 0.4);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  -webkit-box-shadow: 0px 5px 19px 0px rgba(215, 215, 219, 0.3);
+  -moz-box-shadow: 0px 5px 19px 0px rgba(215, 215, 219, 0.3);
+  box-shadow: 0px 5px 19px 0px rgba(215, 215, 219, 0.3);
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  transition: all ease-in 0.2s;
+}
+
+.cell:hover {
+  background-color: #eff2ff;
+  border: 1px solid #e2e4ef;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.cell i {
+  font-size: 1.4rem;
+  background: -webkit-linear-gradient(#333333, rgb(177, 178, 183));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cell:hover i {
+  background: -webkit-linear-gradient(#2b2c38, rgb(151, 157, 186));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cell-name {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--text-med);
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    bottom: 20px;
+  }
+}
