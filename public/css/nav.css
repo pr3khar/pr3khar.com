@@ -74,6 +74,11 @@ nav {
   color: var(--text-med);
 }
 
+.active {
+  background-color: #eff2ff;
+  border: 1px solid #e2e4ef;
+}
+
 @media only screen and (max-width: 800px) {
   nav {
     bottom: 20px;

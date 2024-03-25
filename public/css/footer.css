@@ -124,14 +124,6 @@
   opacity: 0.05;
 }
 
-/* .name img {
-  width: 90%;
-  max-width: 500px;
-  margin: auto;
-  opacity: 0.25;
-  margin-top: -40px;
-} */
-
 footer {
   width: 100%;
   height: auto;
@@ -225,4 +217,15 @@ footer a:hover:after {
 
 footer li {
   margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .end-footer {
+    height: 180px;
+  }
+
+  .name {
+    font-size: 7rem;
+    margin-top: 1px;
+  }
 }

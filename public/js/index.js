@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start the animation
     requestAnimationFrame(updateOpacity);
-  }, 2000); // Adjust the delay as needed
+  }, 500); // Adjust the delay as needed
 });
 
 var ticker = document.querySelector(".ticker"),

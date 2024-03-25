@@ -66,6 +66,8 @@
 
 .project-image img {
   border-radius: 12px;
+  width: 100%;
+  height: auto;
 }
 
 .crib-project-header svg {
@@ -74,6 +76,22 @@
 
 .project-text {
   margin-top: 40px;
+}
+
+.project-image-title {
+  font-size: 1rem;
+  font-style: italic;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.project-text-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 #bold {
@@ -89,4 +107,42 @@
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.project-video {
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+  margin-top: 60px;
+  background-color: #f6f6f6;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 800px) {
+  .crib-project-no {
+    font-size: 1.5rem;
+  }
+
+  .crib-project-header {
+    font-size: 2.5rem;
+  }
+
+  .crib-project-header img {
+    margin-left: 1px;
+    margin-top: 8px;
+  }
+
+  .project-key {
+    font-size: 2rem;
+  }
+
+  .project-image-row {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .project-hero img {
+    border-radius: 12px;
+  }
 }
