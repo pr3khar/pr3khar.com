@@ -1,5 +1,6 @@
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@1,200,500,300,600,400,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gulzar&display=swap");
 
 * {
   margin: 0px;
@@ -76,6 +77,7 @@
 
 .project-text {
   margin-top: 40px;
+  color: var(--text-med);
 }
 
 .project-image-title {
@@ -117,6 +119,67 @@
   background-color: #f6f6f6;
   padding: 24px;
   border-radius: 12px;
+}
+
+.project-news {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.news-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+.news-article-header {
+  font-size: 2rem;
+  font-family: "Gulzar", serif;
+  line-height: 1.5;
+}
+
+.news-article-source {
+  margin-top: 12px;
+  font-size: 1.25rem;
+  color: var(--text-med);
+}
+
+.case-study-soon {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 60px;
+  background-color: #eeeeee;
+  font-size: 1.25rem;
+  font-weight: 450;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 20px 32px 20px;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.case-study-soon i {
+  font-size: 2rem;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-vlight);
+  margin-bottom: 40px;
+}
+
+.more {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 120px;
+  font-weight: 450;
+  font-size: 2.5rem;
 }
 
 @media only screen and (max-width: 800px) {

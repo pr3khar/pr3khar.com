@@ -124,11 +124,18 @@
   opacity: 0.05;
 }
 
+#footer-proj {
+  margin-top: 200px;
+}
+
 footer {
   width: 100%;
   height: auto;
   background-color: var(--dark-bg);
-  padding: 100px 0px 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
 }
 
 .footer-container {
@@ -136,14 +143,15 @@ footer {
   max-width: 1000px;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 .right-column {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: auto;
   justify-content: space-between;
 }
 
@@ -154,69 +162,57 @@ footer {
   letter-spacing: -0.5px;
 }
 
-#city {
-  font-weight: 550;
-  color: var(--text-light);
-  line-height: 1.5;
-}
-
 .right-column {
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.email {
-  margin-bottom: 80px;
-}
-
 .footer-head {
-  font-weight: 400;
+  font-weight: 350;
   color: var(--text-med);
 }
 
-ul {
-  list-style-type: none;
+.socials {
+  display: flex;
+  column-gap: 20px;
 }
 
-ul li {
-  display: inline;
-  margin-right: 20px;
+.social-icon {
+  height: 4rem;
+  width: 4rem;
+  background-color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  transition: 0.2s all ease-in;
+}
+
+.social-icon i {
+  font-size: 1.5rem;
+  color: var(--theme-light);
+}
+
+.social-icon:hover {
+  background-color: var(--blue);
+}
+
+.copyright {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 120px;
+  color: var(--text-med);
 }
 
 footer a {
   text-decoration: none;
   color: var(--text-vlight);
-  position: relative;
   transition: 0.2s all ease-in;
 }
 
 footer a:hover {
-  text-decoration: none;
-  color: var(--blue);
-  position: relative;
-}
-
-footer a:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  margin-top: 4px;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--blue);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-footer a:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-footer li {
-  margin-bottom: 8px;
+  color: var(--theme-light);
 }
 
 @media only screen and (max-width: 800px) {
@@ -227,5 +223,10 @@ footer li {
   .name {
     font-size: 7rem;
     margin-top: 1px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    row-gap: 80px;
   }
 }

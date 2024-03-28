@@ -69,7 +69,7 @@ body {
   margin: auto;
   font-size: 3.5rem;
   font-weight: 550;
-  color: var(--text);
+  color: var(--text-med);
   line-height: 1.2;
 }
 
@@ -80,7 +80,7 @@ body {
   margin: auto;
   margin-top: 80px;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--text-med);
 }
 
 .text-container {
@@ -413,6 +413,25 @@ body {
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+.case-study-soon {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 60px;
+  background-color: #eeeeee;
+  font-size: 1.25rem;
+  font-weight: 450;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 20px 32px 20px;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.case-study-soon i {
+  font-size: 2rem;
 }
 
 @media only screen and (max-width: 800px) {
