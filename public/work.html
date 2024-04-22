@@ -18,6 +18,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/design.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="shortcut icon" href="./assets/melogo.svg" type="image/x-icon" />
@@ -79,114 +80,145 @@
         </div>
       </div>
     </nav>
-    <div class="section-container">
-      <div class="title">
-        <h1>Designed by pr3khar</h1>
-      </div>
-      <div class="space-large"></div>
-      <div class="work">
-        <div
-          class="work-card-crib"
-          onclick="location.href='crib.html';"
-          style="cursor: pointer"
-        >
-          <div class="work-img-crib"></div>
-          <div class="work-description">
-            <div class="work-desc-text">
-              <span id="work-name">Crib </span> in 2023-24
+    <div class="title-work">
+      <h1>Designed by pr3khar</h1>
+    </div>
+    <div class="space-large"></div>
+    <div class="crib">
+      <div class="work-container">
+        <div class="work-time">in 2023-Present</div>
+        <div class="work-title">Crib.in</div>
+        <div class="crib-work">
+          <div class="crib-work-row">
+            <div
+              class="crib-box-large"
+              onclick="location.href='crib.html';"
+            ></div>
+            <div class="crib-box-small-1" onclick="location.href='crib.html';">
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                  <img src="assets/new-assets/rentqr1.svg" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="assets/new-assets/rentqr1.svg" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="assets/new-assets/rentqr1.svg" />
+                </div>
+              </div>
             </div>
-            <i class="ph-fill ph-arrow-circle-right"></i>
+          </div>
+          <div class="crib-work-row">
+            <div class="crib-box-small" onclick="location.href='crib.html';">
+              <div class="ticker-2">
+                <div class="ticker-list-2">
+                  <div class="ticker-item-2">
+                    <img src="assets/new-assets/engagement.svg" />
+                  </div>
+                  <div class="ticker-item-2">
+                    <img src="assets/new-assets/flow.svg" />
+                  </div>
+                </div>
+              </div>
+              <img src="assets/new-assets/collection.png" id="collection" />
+            </div>
+            <div class="crib-box-large" onclick="location.href='crib.html';">
+              <img
+                src="assets/new-assets/tenants-desktop.png"
+                id="crib-desktop"
+              />
+            </div>
           </div>
         </div>
-        <div class="work-grid">
+      </div>
+    </div>
+    <div class="openhouse">
+      <div class="work-container">
+        <div class="work-time">in 2022</div>
+        <div class="work-title-light">Openhouse</div>
+        <div class="openhouse-grid">
           <div
-            class="work-card"
+            class="moments-container"
             onclick="location.href='openhouse.html';"
             style="cursor: pointer"
           >
-            <div class="work-img-openhouse"></div>
-            <div class="work-description">
-              <div class="work-desc-text">
-                <span id="work-name">Openhouse </span> in 2022
-              </div>
-              <i class="ph-fill ph-arrow-circle-right"></i>
-            </div>
+            <img src="assets/moments.png" />
           </div>
-          <div
-            class="work-card"
-            id="upstox-card"
-            onclick="location.href='upstox.html';"
-            style="cursor: pointer"
-          >
-            <div class="work-img-upstox"></div>
-            <div class="work-description">
-              <div class="work-desc-text">
-                <span id="work-name">Upstox </span> in 2022
-              </div>
-              <i class="ph-fill ph-arrow-circle-right"></i>
-            </div>
+          <div class="modules-container">
+            <img src="assets/new-assets/modules.png" />
+          </div>
+          <div class="milestones-container">
+            <img src="assets/new-assets/milestoneshome.png" />
           </div>
         </div>
-        <div class="work-grid">
-          <div
-            class="work-card"
-            onclick="location.href='rovers.html';"
-            style="cursor: pointer"
-          >
-            <div class="work-img-rovers"></div>
-            <div class="work-description">
-              <div class="work-desc-text">
-                <span id="work-name">Rovers </span> in 2021
-              </div>
-              <i class="ph-fill ph-arrow-circle-right"></i>
+      </div>
+    </div>
+    <div class="upstox">
+      <div class="work-container">
+        <div class="work-time">in 2022</div>
+        <div class="work-title-light">Upstox</div>
+        <div class="upstox-work-container">
+          <div class="upstox-work" onclick="location.href='upstox.html';">
+            <video height="560px" width="100%" autoplay loop muted>
+              <source src="assets/new-assets/upstox.mp4" />
+            </video>
+          </div>
+          <div class="upstox-people" onclick="location.href='upstox.html';">
+            <div class="up-people-text">
+              Making investing simple for 10 million+ Indians
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="more">
-        <div class="divider"></div>
-        Adding more exciting work soon.
-      </div> -->
     </div>
     <div class="more">
-      <div class="divider"></div>
-      Adding more exciting work soon.
+      <p>adding more exciting work soon.</p>
     </div>
-    <footer id="footer-proj">
-      <div class="footer-container">
-        <div class="left-column">
-          <div class="email">
-            <div class="footer-head">Say hi</div>
-            <a href="mailto:pr3khar@gmail.com">pr3khar@gmail.com</a>
+    <footer id="foot">
+      <div class="box-container">
+        <div class="box" id="left">
+          <div class="box-col">
+            <i class="ph ph-hand-waving"></i>
+            <div class="box-bottom">
+              <a href="mailto:pr3khar@gmail.com">pr3khar@gmail.com</a>
+            </div>
           </div>
         </div>
-        <div class="right-column">
-          <div class="socials">
-            <div
-              class="social-icon"
-              onclick="location.href='https://www.linkedin.com/in/pr3khar/';"
-              style="cursor: pointer"
-            >
-              <i class="ph ph-linkedin-logo"></i>
+        <div class="box">
+          <div class="box-col">
+            <i class="ph ph-linkedin-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">LinkedIn</div>
             </div>
-            <div
-              class="social-icon"
-              onclick="location.href='https://github.com/pr3khar';"
-              style="cursor: pointer"
-            >
-              <i class="ph ph-github-logo"></i>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-col">
+            <i class="ph ph-twitter-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">Twitter</div>
             </div>
-            <div
-              class="social-icon"
-              onclick="location.href='https://twitter.com/pr3khar';"
-              style="cursor: pointer"
-            >
-              <i class="ph ph-twitter-logo"></i>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-col">
+            <i class="ph ph-github-logo"></i>d
+            <div class="box-bottom">
+              <div class="footer-text">Github</div>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="right">
+          <div class="box-col">
+            <i class="ph ph-dribbble-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">Dribbble</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="copyright">🄯 2024 • Prakhar Prasad</div>
+      <div class="curious">be curious</div>
     </footer>
+    <script src="js/work.js"></script>
   </body>
 </html>

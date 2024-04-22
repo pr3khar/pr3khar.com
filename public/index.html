@@ -15,6 +15,10 @@
 
       gtag("config", "G-WF2BRCFCJ2");
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
@@ -76,28 +80,39 @@
   <body>
     <div class="loader-wrapper" id="loader">
       <div class="loader">
-        <p>
-          <svg
-            width="121"
-            height="49"
-            viewBox="0 0 121 49"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.4898 47.2007V17.8008H6.50764V21.2844H6.85204C7.10715 20.8378 7.45792 20.3209 7.90435 19.734C8.36353 19.147 9.00127 18.6366 9.81761 18.2027C10.6339 17.7561 11.699 17.5328 13.0128 17.5328C14.7347 17.5328 16.2653 17.9666 17.6046 18.8344C18.9566 19.7021 20.0217 20.959 20.7997 22.6051C21.5778 24.2512 21.9668 26.2353 21.9668 28.5577C21.9668 30.8548 21.5842 32.8324 20.8189 34.4913C20.0536 36.1375 18.9949 37.4071 17.6429 38.3003C16.3036 39.1809 14.7666 39.6211 13.0319 39.6211C11.7436 39.6211 10.6849 39.4041 9.85587 38.9702C9.03955 38.5238 8.39542 38.0068 7.92347 37.4198C7.46429 36.833 7.10715 36.3161 6.85204 35.8695H6.62245V47.2007H2.4898ZM12.1327 36.0802C13.3699 36.0802 14.4031 35.7482 15.2321 35.0847C16.0612 34.4213 16.6862 33.5216 17.1071 32.386C17.5408 31.2375 17.7577 29.9488 17.7577 28.5195C17.7577 27.1031 17.5472 25.8335 17.1263 24.7104C16.7054 23.5876 16.0804 22.7008 15.2513 22.05C14.4222 21.3992 13.3827 21.0738 12.1327 21.0738C10.9209 21.0738 9.90051 21.3865 9.07143 22.0117C8.24235 22.6242 7.61098 23.4919 7.17729 24.6149C6.75639 25.725 6.54592 27.0264 6.54592 28.5195C6.54592 30.0125 6.76275 31.3269 7.19644 32.4625C7.63011 33.5981 8.26148 34.485 9.09056 35.1229C9.9324 35.7612 10.9464 36.0802 12.1327 36.0802ZM23.0306 39.2V17.8008H27.0293V21.2269H27.259C27.6543 20.0785 28.3432 19.1725 29.3252 18.509C30.3202 17.8327 31.4426 17.4945 32.6926 17.4945C32.9478 17.4945 33.2475 17.5073 33.5918 17.5328C33.9489 17.5456 34.2359 17.5647 34.4529 17.5902V21.5715C34.2871 21.5204 33.9874 21.4694 33.5536 21.4184C33.1327 21.3673 32.7053 21.3418 32.2716 21.3418C31.2896 21.3418 30.4094 21.5523 29.6314 21.9734C28.866 22.3818 28.2602 22.9496 27.8137 23.6769C27.38 24.3915 27.1633 25.221 27.1633 26.1653V39.2H23.0306Z"
-              fill="#343434"
-            />
-            <path
-              d="M55.2959 31.9457L55.2386 26.8735H55.9846L64.4987 17.8007H69.4733L59.7729 28.1367H59.0842L55.2959 31.9457ZM51.4694 39.1999V10.6804H55.602V39.1999H51.4694ZM64.9388 39.1999L57.2857 29.0555L60.1557 26.127L70.0662 39.1999H64.9388ZM73.8087 26.5097V39.1999H69.6761V10.6804H73.7512V21.3226H74.0382C74.5356 20.1614 75.2945 19.2427 76.315 18.5663C77.3482 17.8773 78.694 17.5328 80.3519 17.5328C81.8189 17.5328 83.1007 17.8326 84.1978 18.4324C85.2947 19.0321 86.1491 19.9317 86.7614 21.1312C87.3864 22.3307 87.6989 23.8236 87.6989 25.61V39.1999H83.528V26.1076C83.528 24.5254 83.12 23.3005 82.3035 22.4328C81.5 21.565 80.3776 21.1312 78.9362 21.1312C77.9414 21.1312 77.0612 21.3481 76.2959 21.782C75.5306 22.2031 74.9247 22.8092 74.4783 23.6003C74.0318 24.3915 73.8087 25.3614 73.8087 26.5097ZM95.9184 39.6593C94.5663 39.6593 93.3418 39.4104 92.2449 38.9128C91.148 38.4025 90.2806 37.6623 89.6429 36.6926C89.0051 35.7227 88.6863 34.5425 88.6863 33.1514C88.6863 31.9394 88.9158 30.9503 89.3749 30.1847C89.8469 29.4063 90.4782 28.7874 91.2692 28.3281C92.06 27.8687 92.9402 27.5242 93.9095 27.2944C94.8788 27.0648 95.8738 26.8862 96.894 26.7586C98.1824 26.6182 99.222 26.4969 100.013 26.3948C100.804 26.2928 101.378 26.1334 101.735 25.9163C102.104 25.6867 102.29 25.3229 102.29 24.8253V24.7297C102.29 23.5174 101.945 22.5795 101.256 21.9159C100.58 21.2524 99.5727 20.9206 98.2334 20.9206C96.8431 20.9206 95.7398 21.2269 94.9233 21.8394C94.1198 22.4391 93.5651 23.1218 93.259 23.8874L89.3367 22.9878C89.8087 21.6863 90.4912 20.6399 91.3838 19.8488C92.2895 19.0449 93.3227 18.4579 94.4835 18.0878C95.6568 17.7178 96.8813 17.5328 98.157 17.5328C99.0114 17.5328 99.9171 17.6348 100.874 17.839C101.83 18.0304 102.729 18.3941 103.571 18.93C104.426 19.4532 105.121 20.2061 105.657 21.1886C106.193 22.1712 106.46 23.4408 106.46 24.9975V39.1999H102.385V36.2715H102.232C101.977 36.7945 101.575 37.3178 101.027 37.8409C100.491 38.3642 99.8022 38.7979 98.9605 39.1426C98.1185 39.4871 97.1047 39.6593 95.9184 39.6593ZM96.8176 36.3288C97.9782 36.3288 98.9669 36.1056 99.7831 35.659C100.6 35.1996 101.225 34.5998 101.658 33.8597C102.092 33.1195 102.309 32.3348 102.309 31.5055V28.7301C102.156 28.8705 101.869 29.0043 101.448 29.1319C101.027 29.2596 100.548 29.3681 100.013 29.4573C99.477 29.5467 98.9541 29.6297 98.4437 29.7062C97.9336 29.7699 97.5063 29.8211 97.162 29.8593C96.3584 29.9742 95.625 30.1528 94.9618 30.3951C94.2984 30.6249 93.7628 30.9694 93.3545 31.4288C92.9593 31.8754 92.7614 32.4688 92.7614 33.209C92.7614 34.2426 93.1442 35.021 93.9095 35.544C94.6748 36.0674 95.6441 36.3288 96.8176 36.3288ZM108.5 39.1999V17.8007H112.499V21.2269H112.728C113.124 20.0784 113.813 19.1725 114.795 18.5089C115.79 17.8326 116.912 17.4945 118.162 17.4945C118.417 17.4945 118.717 17.5072 119.061 17.5328C119.418 17.5455 119.705 17.5647 119.922 17.5902V21.5714C119.756 21.5204 119.457 21.4693 119.023 21.4183C118.602 21.3672 118.175 21.3417 117.741 21.3417C116.759 21.3417 115.879 21.5523 115.101 21.9734C114.335 22.3817 113.73 22.9496 113.283 23.6769C112.849 24.3915 112.633 25.221 112.633 26.1652V39.1999H108.5Z"
-              fill="#343434"
-            />
-            <path
-              d="M36.9408 41.601C36.1246 41.601 35.3245 41.4539 34.5408 41.1599C33.7897 40.8334 33.1858 40.4575 32.7286 40.033C32.2713 39.6084 32.0593 39.2 32.0918 38.808C32.1244 38.2854 32.3042 37.877 32.6306 37.583C32.9571 37.289 33.4797 37.191 34.198 37.289C35.3081 37.5175 36.4346 37.5994 37.5776 37.534C38.7205 37.4359 39.7816 37.2074 40.7612 36.8479C41.7734 36.4885 42.5899 35.9985 43.2102 35.378C44.0918 34.5285 44.5491 33.81 44.5816 33.222C44.6142 32.6014 44.1572 31.9805 43.2102 31.36C42.7858 31.066 42.2632 30.7884 41.6429 30.527C41.0225 30.2655 40.402 30.0695 39.7816 29.939C39.1939 29.7755 38.6715 29.7104 38.2143 29.743C37.9204 29.7755 37.5611 29.7265 37.1367 29.596C36.7123 29.4325 36.2877 29.2365 35.8633 29.008C35.6673 28.7794 35.4878 28.4035 35.3245 27.881C35.1611 27.3584 35.047 27.0315 34.9816 26.9009C34.9491 26.7375 35.0632 26.5415 35.3245 26.313C35.5858 26.0844 36.1082 25.7414 36.8918 25.2839C37.6755 24.794 38.8185 24.1406 40.3204 23.324C41.6918 22.5726 42.7368 22.0009 43.4551 21.6089C44.2062 21.1843 44.7776 20.8576 45.1694 20.629C45.5938 20.3676 45.9531 20.1063 46.2469 19.845C46.6388 19.3876 46.8183 19.0446 46.7857 18.8159C46.7531 18.5873 46.3123 18.3913 45.4633 18.228C44.647 18.1626 43.9939 18.1626 43.5041 18.228C43.0143 18.2606 42.7694 18.3423 42.7694 18.4729C42.7694 18.4729 42.753 18.4729 42.7204 18.4729C42.7204 18.4729 42.6714 18.4729 42.5735 18.4729C42.4101 18.4076 42.0511 18.424 41.4959 18.522C40.9407 18.62 40.402 18.7343 39.8796 18.8649C39.3898 18.9956 39.1285 19.11 39.0959 19.208C39.0633 19.2733 38.8346 19.3876 38.4102 19.551C38.0184 19.6816 37.6101 19.796 37.1857 19.894C36.7939 19.992 36.549 20.041 36.451 20.041C36.2877 19.9756 36.0918 19.747 35.8633 19.355C35.6673 18.963 35.504 18.5546 35.3735 18.13C35.2429 17.6726 35.2101 17.3623 35.2755 17.199C35.3409 17.0683 35.5694 16.8723 35.9612 16.611C36.3856 16.317 36.8593 16.023 37.3816 15.729C37.904 15.4023 38.3448 15.1573 38.7041 14.9939C39.1613 14.8633 39.8306 14.749 40.7122 14.651C41.6265 14.5203 42.5245 14.4223 43.4061 14.357C44.3203 14.259 44.9735 14.2263 45.3653 14.259C46.8673 14.4223 48.0756 14.8143 48.9898 15.435C49.904 16.023 50.4918 16.9703 50.7531 18.277C50.851 18.7343 50.851 19.208 50.7531 19.698C50.6551 20.188 50.4428 20.678 50.1163 21.168C49.7899 21.658 49.3001 22.197 48.6469 22.785C47.8307 23.3076 47.194 23.7486 46.7367 24.108C46.3123 24.4346 45.7246 24.7775 44.9735 25.137C44.745 25.3004 44.3857 25.4799 43.8959 25.6759C43.4061 25.8719 42.9489 26.0515 42.5245 26.215C42.1001 26.3784 41.8878 26.4925 41.8878 26.558C41.8878 26.558 42.0347 26.5905 42.3286 26.656C42.655 26.6885 42.9979 26.754 43.3571 26.852C43.749 26.9174 44.0265 27.0315 44.1898 27.195C45.1368 27.5215 46.002 28.0934 46.7857 28.91C47.602 29.694 48.1736 30.3145 48.5 30.772C48.9572 31.7845 49.0062 32.8954 48.6469 34.104C48.3205 35.28 47.7163 36.407 46.8347 37.485C45.9856 38.5304 44.9899 39.396 43.8469 40.082C42.9327 40.6045 41.8062 40.9804 40.4673 41.209C39.1613 41.405 37.9858 41.5355 36.9408 41.601Z"
-              fill="#65BDEE"
-            />
-          </svg>
-        </p>
+        <svg
+          id="header-logo"
+          width="78"
+          height="79"
+          viewBox="0 0 78 79"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.448 58.5498L33.5303 54.6737L28.3769 51.9052L26.2118 55.9354C25.6518 56.9779 25.4364 57.8365 25.5658 58.5114C25.703 59.1717 26.168 59.7147 26.9609 60.1407C27.739 60.5587 28.5496 60.6347 29.3925 60.3686C30.2502 60.1104 30.9354 59.5041 31.448 58.5498ZM38.5955 55.4934L37.8028 56.969L35.2702 55.6084L28.4672 68.2717L26.7274 67.337L29.7443 61.7211L21.3757 64.4621L19.1294 63.2553L25.5006 61.1157C23.3793 59.7112 23.0404 57.6656 24.4838 54.9787L26.6371 50.9705L24.5449 49.8466L25.3376 48.371L38.5955 55.4934Z"
+            fill="#656565"
+          ></path>
+          <path
+            d="M18.6308 42.9326L23.0287 42.7978L22.8496 36.9506L18.2767 37.0907C17.094 37.1269 16.2427 37.3697 15.7229 37.8192C15.2197 38.2681 14.9819 38.9424 15.0095 39.842C15.0365 40.7249 15.376 41.4649 16.0279 42.0618C16.6803 42.6755 17.548 42.9657 18.6308 42.9326ZM24.8514 47.5943L23.1772 47.6456L23.0892 44.7719L8.72092 45.212L8.66045 43.238L15.0325 43.0428L8.47445 37.1658L8.39637 34.617L13.4349 39.0648C13.5906 36.5255 15.1927 35.2092 18.2413 35.1158L22.7891 34.9765L22.7164 32.6026L24.3906 32.5513L24.8514 47.5943Z"
+            fill="#656565"
+          ></path>
+          <path
+            d="M26.0001 23.7573L28.3158 27.4987L33.2901 24.4199L30.8823 20.5297C30.2596 19.5235 29.6236 18.9077 28.9745 18.6823C28.3341 18.471 27.6312 18.6022 26.866 19.0758C26.1149 19.5407 25.6438 20.2047 25.4527 21.0678C25.2475 21.9396 25.43 22.8361 26.0001 23.7573ZM25.0733 31.4754L24.1917 30.0511L26.6364 28.5381L19.0711 16.3148L20.7505 15.2754L24.1055 20.6962L25.9161 12.0783L28.0844 10.7363L26.7517 17.3237C29.0287 16.1888 30.9697 16.9181 32.5749 19.5116L34.9694 23.3805L36.9889 22.1306L37.8704 23.5548L25.0733 31.4754Z"
+            fill="#656565"
+          ></path>
+          <path
+            d="M59.5169 36.0748L55.1169 36.056L55.0919 41.9059L59.6668 41.9255C60.8502 41.9306 61.7094 41.7176 62.2446 41.2866C62.7631 40.8555 63.0243 40.1899 63.0282 39.2899C63.0319 38.4066 62.7185 37.6552 62.0878 37.0359C61.4572 36.3998 60.6002 36.0795 59.5169 36.0748ZM53.4627 31.1989L55.1377 31.206L55.1254 34.081L69.5003 34.1426L69.4918 36.1176L63.1169 36.0903L69.4658 42.1925L69.4549 44.7425L64.5746 40.1215C64.3304 42.6539 62.6834 43.9135 59.6334 43.9004L55.0834 43.8809L55.0732 46.2559L53.3983 46.2487L53.4627 31.1989Z"
+            fill="#656565"
+          ></path>
+          <path
+            d="M46.1965 19.9507L44.2507 23.8971L49.4976 26.4841L51.5208 22.3808C52.0441 21.3194 52.2293 20.4538 52.0765 19.7838C51.9163 19.1287 51.4326 18.6022 50.6254 18.2042C49.8331 17.8136 49.0204 17.766 48.1873 18.0613C47.3391 18.3493 46.6756 18.9791 46.1965 19.9507ZM39.16 23.2547L39.9007 21.7524L42.4793 23.0238L48.8362 10.1307L50.6076 11.0041L47.7885 16.7219L56.0563 13.6906L58.3434 14.8182L52.0508 17.1789C54.2198 18.5084 54.6299 20.541 53.2811 23.2766L51.269 27.3575L53.3992 28.4078L52.6585 29.9101L39.16 23.2547Z"
+            fill="#656565"
+          ></path>
+          <path
+            d="M51.7201 54.939L49.4045 51.1976L44.4301 54.2764L46.8379 58.1666C47.4607 59.1728 48.0966 59.7886 48.7458 60.014C49.3861 60.2253 50.089 60.0941 50.8542 59.6204C51.6054 59.1556 52.0764 58.4916 52.2675 57.6285C52.4727 56.7567 52.2902 55.8602 51.7201 54.939ZM52.6469 47.2209L53.5285 48.6452L51.0838 50.1582L58.6491 62.3814L56.9698 63.4208L53.6147 58.0001L51.8041 66.618L49.6358 67.96L50.9685 61.3726C48.6916 62.5075 46.7505 61.7782 45.1454 59.1847L42.7508 55.3158L40.7313 56.5657L39.8498 55.1414L52.6469 47.2209Z"
+            fill="#656565"
+          ></path>
+        </svg>
       </div>
     </div>
     <nav>
@@ -126,13 +141,9 @@
           <i class="ph ph-briefcase"></i>
           <div class="cell-name">work</div>
         </div>
-        <!-- <div class="cell">
-          <i class="ph ph-pen-nib"></i>
-          <div class="cell-name">blog</div>
-        </div> -->
         <div
           class="cell"
-          onclick="location.href='index.html#footer';"
+          onclick="location.href='index.html#foot';"
           style="cursor: pointer"
         >
           <i class="ph ph-share-network"></i>
@@ -140,13 +151,153 @@
         </div>
       </div>
     </nav>
-    <div class="white-bg">
-      <div class="title">
-        <h1>
-          <span id="hero-light">Hello,</span><br />
-          <span id="hero-light">I'm <img src="assets/pr3.png" /></span> Prakhar.
-        </h1>
+    <div class="white-bg" id="white-bg">
+      <div class="texture">
+        <div class="title">
+          <svg
+            id="header-logo"
+            width="78"
+            height="79"
+            viewBox="0 0 78 79"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.448 58.5498L33.5303 54.6737L28.3769 51.9052L26.2118 55.9354C25.6518 56.9779 25.4364 57.8365 25.5658 58.5114C25.703 59.1717 26.168 59.7147 26.9609 60.1407C27.739 60.5587 28.5496 60.6347 29.3925 60.3686C30.2502 60.1104 30.9354 59.5041 31.448 58.5498ZM38.5955 55.4934L37.8028 56.969L35.2702 55.6084L28.4672 68.2717L26.7274 67.337L29.7443 61.7211L21.3757 64.4621L19.1294 63.2553L25.5006 61.1157C23.3793 59.7112 23.0404 57.6656 24.4838 54.9787L26.6371 50.9705L24.5449 49.8466L25.3376 48.371L38.5955 55.4934Z"
+              fill="#656565"
+            ></path>
+            <path
+              d="M18.6308 42.9326L23.0287 42.7978L22.8496 36.9506L18.2767 37.0907C17.094 37.1269 16.2427 37.3697 15.7229 37.8192C15.2197 38.2681 14.9819 38.9424 15.0095 39.842C15.0365 40.7249 15.376 41.4649 16.0279 42.0618C16.6803 42.6755 17.548 42.9657 18.6308 42.9326ZM24.8514 47.5943L23.1772 47.6456L23.0892 44.7719L8.72092 45.212L8.66045 43.238L15.0325 43.0428L8.47445 37.1658L8.39637 34.617L13.4349 39.0648C13.5906 36.5255 15.1927 35.2092 18.2413 35.1158L22.7891 34.9765L22.7164 32.6026L24.3906 32.5513L24.8514 47.5943Z"
+              fill="#656565"
+            ></path>
+            <path
+              d="M26.0001 23.7573L28.3158 27.4987L33.2901 24.4199L30.8823 20.5297C30.2596 19.5235 29.6236 18.9077 28.9745 18.6823C28.3341 18.471 27.6312 18.6022 26.866 19.0758C26.1149 19.5407 25.6438 20.2047 25.4527 21.0678C25.2475 21.9396 25.43 22.8361 26.0001 23.7573ZM25.0733 31.4754L24.1917 30.0511L26.6364 28.5381L19.0711 16.3148L20.7505 15.2754L24.1055 20.6962L25.9161 12.0783L28.0844 10.7363L26.7517 17.3237C29.0287 16.1888 30.9697 16.9181 32.5749 19.5116L34.9694 23.3805L36.9889 22.1306L37.8704 23.5548L25.0733 31.4754Z"
+              fill="#656565"
+            ></path>
+            <path
+              d="M59.5169 36.0748L55.1169 36.056L55.0919 41.9059L59.6668 41.9255C60.8502 41.9306 61.7094 41.7176 62.2446 41.2866C62.7631 40.8555 63.0243 40.1899 63.0282 39.2899C63.0319 38.4066 62.7185 37.6552 62.0878 37.0359C61.4572 36.3998 60.6002 36.0795 59.5169 36.0748ZM53.4627 31.1989L55.1377 31.206L55.1254 34.081L69.5003 34.1426L69.4918 36.1176L63.1169 36.0903L69.4658 42.1925L69.4549 44.7425L64.5746 40.1215C64.3304 42.6539 62.6834 43.9135 59.6334 43.9004L55.0834 43.8809L55.0732 46.2559L53.3983 46.2487L53.4627 31.1989Z"
+              fill="#656565"
+            ></path>
+            <path
+              d="M46.1965 19.9507L44.2507 23.8971L49.4976 26.4841L51.5208 22.3808C52.0441 21.3194 52.2293 20.4538 52.0765 19.7838C51.9163 19.1287 51.4326 18.6022 50.6254 18.2042C49.8331 17.8136 49.0204 17.766 48.1873 18.0613C47.3391 18.3493 46.6756 18.9791 46.1965 19.9507ZM39.16 23.2547L39.9007 21.7524L42.4793 23.0238L48.8362 10.1307L50.6076 11.0041L47.7885 16.7219L56.0563 13.6906L58.3434 14.8182L52.0508 17.1789C54.2198 18.5084 54.6299 20.541 53.2811 23.2766L51.269 27.3575L53.3992 28.4078L52.6585 29.9101L39.16 23.2547Z"
+              fill="#656565"
+            ></path>
+            <path
+              d="M51.7201 54.939L49.4045 51.1976L44.4301 54.2764L46.8379 58.1666C47.4607 59.1728 48.0966 59.7886 48.7458 60.014C49.3861 60.2253 50.089 60.0941 50.8542 59.6204C51.6054 59.1556 52.0764 58.4916 52.2675 57.6285C52.4727 56.7567 52.2902 55.8602 51.7201 54.939ZM52.6469 47.2209L53.5285 48.6452L51.0838 50.1582L58.6491 62.3814L56.9698 63.4208L53.6147 58.0001L51.8041 66.618L49.6358 67.96L50.9685 61.3726C48.6916 62.5075 46.7505 61.7782 45.1454 59.1847L42.7508 55.3158L40.7313 56.5657L39.8498 55.1414L52.6469 47.2209Z"
+              fill="#656565"
+            ></path>
+          </svg>
+          <p>
+            Prakhar <span id="serif">– product designer.</span><br />
+            I loves stories, fine details and numbers.
+          </p>
+        </div>
       </div>
+    </div>
+    <div class="crib">
+      <div class="work-container">
+        <div class="work-time">in 2023-Present</div>
+        <div class="work-title">Crib.in</div>
+        <div class="crib-work">
+          <div class="crib-work-row">
+            <div class="crib-box-large" onclick="location.href='crib.html';">
+              <div class="ticker-4">
+                <div class="ticker-list-4">
+                  <div class="ticker-item-4">
+                    <img src="assets/cribticker1.svg" />
+                  </div>
+                  <div class="ticker-item-4">
+                    <img src="assets/cribticker2.svg" />
+                  </div>
+                  <div class="ticker-item-4">
+                    <img src="assets/cribticker3.svg" />
+                  </div>
+                  <div class="ticker-item-4">
+                    <img src="assets/cribticker4.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="crib-box-small-1" onclick="location.href='crib.html';">
+              <!-- <div class="carousel-track">
+                <div class="carousel-slide">
+                  <img src="assets/new-assets/rentqr1.svg" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="assets/new-assets/rentqr1.svg" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="assets/new-assets/rentqr1.svg" />
+                </div>
+              </div> -->
+              <img src="assets/new-assets/rentqr1.svg" />
+            </div>
+          </div>
+          <div class="crib-work-row">
+            <div class="crib-box-small" onclick="location.href='crib.html';">
+              <div class="ticker-2">
+                <div class="ticker-list-2">
+                  <div class="ticker-item-2">
+                    <img src="assets/new-assets/engagement.svg" />
+                  </div>
+                  <div class="ticker-item-2">
+                    <img src="assets/new-assets/flow.svg" />
+                  </div>
+                </div>
+              </div>
+              <img src="assets/new-assets/collection.png" id="collection" />
+            </div>
+            <div class="crib-box-large" onclick="location.href='crib.html';">
+              <img
+                src="assets/new-assets/tenants-desktop.png"
+                id="crib-desktop"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="openhouse">
+      <div class="work-container">
+        <div class="work-time">in 2022</div>
+        <div class="work-title-light">Openhouse</div>
+        <div class="openhouse-grid">
+          <div
+            class="moments-container"
+            onclick="location.href='openhouse.html';"
+            style="cursor: pointer"
+          >
+            <img src="assets/moments.png" />
+          </div>
+          <div class="modules-container">
+            <img src="assets/new-assets/modules.png" />
+          </div>
+          <div class="milestones-container">
+            <img src="assets/new-assets/milestoneshome.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upstox">
+      <div class="work-container">
+        <div class="work-time">in 2022</div>
+        <div class="work-title-light">Upstox</div>
+        <div class="upstox-work-container">
+          <div class="upstox-work" onclick="location.href='upstox.html';">
+            <video height="560px" width="100%" autoplay loop muted>
+              <source src="assets/new-assets/upstox.mp4" />
+            </video>
+          </div>
+          <div class="upstox-people" onclick="location.href='upstox.html';">
+            <div class="up-people-text">
+              Making investing simple for 10 million+ Indians
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="extra-title">some experiments</div>
       <div class="ticker">
         <div class="ticker-list">
           <div class="ticker-item">
@@ -172,179 +323,74 @@
           </div>
         </div>
       </div>
-      <div class="sub-header">
-        <h2>
-          Currently, a product designer at <span id="company-name">Crib</span>,
-          previously at <span id="company-name">Upstox</span> and
-          <span id="company-name">Openhouse</span>. I enjoy designing elegant
-          and thought-out products.
-          <div class="sub-header-2">
-            Also, I love
-            <div class="scroller">
-              <span>
-                katsu curry 🍛<br />
-                movies 🎬<br />
-                pizza 🍕<br />
-                coldplay 📻<br />
-                technology 💻<br />
-                stationary 🖋<br />
-                Real Madrid ⚽️<br />
-                travelling 🛫<br />
-                cooking 🍳<br />
-                a good debate
-              </span>
-            </div>
-          </div>
-        </h2>
-      </div>
     </div>
-    <div class="work">
-      <div
-        class="work-card-crib"
-        onclick="location.href='crib.html';"
-        style="cursor: pointer"
-      >
-        <div class="work-img-crib"></div>
-        <div class="work-description">
-          <div class="work-desc-text">
-            <span id="work-name">Crib </span> in 2023-24
-          </div>
-          <i class="ph-fill ph-arrow-circle-right"></i>
-        </div>
-      </div>
-      <div class="work-grid">
+    <footer id="foot">
+      <div class="box-container">
         <div
-          class="work-card"
-          onclick="location.href='openhouse.html';"
+          class="box"
+          id="left"
+          onclick="location.href='mailto:pr3khar@gmail.com';"
           style="cursor: pointer"
         >
-          <div class="work-img-openhouse"></div>
-          <div class="work-description">
-            <div class="work-desc-text">
-              <span id="work-name">Openhouse </span> in 2022
+          <div class="box-col">
+            <i class="ph ph-hand-waving"></i>
+            <div class="box-bottom">
+              <a href="mailto:pr3khar@gmail.com">pr3khar@gmail.com</a>
             </div>
-            <i class="ph-fill ph-arrow-circle-right"></i>
           </div>
         </div>
         <div
-          class="work-card"
-          id="upstox-card"
-          onclick="location.href='upstox.html';"
+          class="box"
+          onclick="location.href='https://www.linkedin.com/in/pr3khar/';"
           style="cursor: pointer"
         >
-          <div class="work-img-upstox"></div>
-          <div class="work-description">
-            <div class="work-desc-text">
-              <span id="work-name">Upstox </span> in 2022
+          <div class="box-col">
+            <i class="ph ph-linkedin-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">LinkedIn</div>
             </div>
-            <i class="ph-fill ph-arrow-circle-right"></i>
           </div>
         </div>
-      </div>
-      <div class="home-links-container">
         <div
-          class="home-links"
-          onclick="location.href='work.html';"
+          class="box"
+          onclick="location.href='https://twitter.com/pr3khar';"
           style="cursor: pointer"
         >
-          view more work
-          <i class="ph ph-arrow-right"></i>
+          <div class="box-col">
+            <i class="ph ph-twitter-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">Twitter</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="blogs">
-      <div class="section-title">blogs</div>
-      <div class="blog-container">
         <div
-          class="blog-box"
-          onclick="location.href='https://medium.com/@prakharpd/donkeys-are-the-king-of-the-jungle-ceab2bee9a5a';"
+          class="box"
+          onclick="location.href='https://github.com/pr3khar';"
           style="cursor: pointer"
         >
-          <div class="blog-image">
-            <img
-              src="https://res.cloudinary.com/dfy6gfncm/image/upload/v1711478758/Designer-5_v77cie.png"
-            />
-          </div>
-          <div class="blog-title">Are donkeys the king of the jungle?</div>
-          <div class="blog-date">September 25, 2021</div>
-        </div>
-        <div class="blog-box">
-          <div class="blog-image">
-            <img src="assets/Burger.png" />
-          </div>
-          <div class="blog-title">Burgers in Bangalore</div>
-          <div class="blog-date">Coming soon</div>
-        </div>
-      </div>
-    </div>
-    <div class="transition">
-      <div class="white-bar-7"></div>
-      <div class="black-bar-7"></div>
-      <div class="white-bar-7"></div>
-      <div class="black-bar-7"></div>
-      <div class="white-bar-6"></div>
-      <div class="black-bar-6"></div>
-      <div class="white-bar-6"></div>
-      <div class="black-bar-6"></div>
-      <div class="white-bar-5"></div>
-      <div class="black-bar-5"></div>
-      <div class="white-bar-5"></div>
-      <div class="black-bar-5"></div>
-      <div class="white-bar-4"></div>
-      <div class="black-bar-4"></div>
-      <div class="white-bar-4"></div>
-      <div class="black-bar-4"></div>
-      <div class="white-bar-3"></div>
-      <div class="black-bar-3"></div>
-      <div class="white-bar-3"></div>
-      <div class="black-bar-3"></div>
-      <div class="white-bar-2"></div>
-      <div class="black-bar-2"></div>
-      <div class="white-bar-1"></div>
-      <div class="black-bar-1"></div>
-    </div>
-    <footer id="footer">
-      <div class="footer-container">
-        <div class="left-column">
-          <div class="email">
-            <div class="footer-head">Say hi</div>
-            <a href="mailto:pr3khar@gmail.com">pr3khar@gmail.com</a>
-          </div>
-        </div>
-        <div class="right-column">
-          <div class="socials">
-            <div
-              class="social-icon"
-              onclick="location.href='https://www.linkedin.com/in/pr3khar/';"
-              style="cursor: pointer"
-            >
-              <i class="ph ph-linkedin-logo"></i>
+          <div class="box-col">
+            <i class="ph ph-github-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">Github</div>
             </div>
-            <div
-              class="social-icon"
-              onclick="location.href='https://github.com/pr3khar';"
-              style="cursor: pointer"
-            >
-              <i class="ph ph-github-logo"></i>
-            </div>
-            <div
-              class="social-icon"
-              onclick="location.href='https://twitter.com/pr3khar';"
-              style="cursor: pointer"
-            >
-              <i class="ph ph-twitter-logo"></i>
+          </div>
+        </div>
+        <div
+          class="box"
+          id="right"
+          onclick="location.href='https://dribbble.com/pr3khar';"
+          style="cursor: pointer"
+        >
+          <div class="box-col">
+            <i class="ph ph-dribbble-logo"></i>
+            <div class="box-bottom">
+              <div class="footer-text">Dribbble</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="copyright">🄯 2024 • Prakhar Prasad</div>
+      <div class="curious">be curious</div>
     </footer>
-    <div class="end-footer">
-      <div class="name">
-        pr3khar
-        <!-- <img src="assets/sign.svg" /> -->
-      </div>
-    </div>
     <script src="js/index.js"></script>
   </body>
 </html>

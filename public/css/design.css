@@ -1,8 +1,5 @@
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@1,200,500,300,600,400,700&display=swap");
-@import url("https://use.typekit.net/zmy0cob.css");
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik:wght@400;500;600;700&display=swap");
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1,700,500,300,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0px;
@@ -46,129 +43,39 @@
 }
 
 body {
-  font-family: "General Sans", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   color: var(--text-dark);
-  background-color: #f8f9fa;
+  background-color: #f2f2f2;
 }
 
-.section-container {
-  padding-top: 100px;
-  padding-bottom: 40px;
-}
-
-.title {
+.title-work {
   position: fixed;
   z-index: -1;
   width: 100%;
   margin: auto;
-  margin-bottom: 80px;
-  font-size: 4rem;
-  text-align: center;
-  color: #e0e0e0;
+  height: auto;
+  margin-bottom: -100px;
+  padding-top: 150px;
 }
 
 h1 {
-  font-weight: 600;
-  letter-spacing: -3px;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-left: 8px;
+  font-size: 4.7rem;
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .space-large {
   width: 100%;
-  height: 200px;
-}
-
-.work-grid {
-  display: flex;
-  width: 90%;
-  max-width: 1000px;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 40px;
-}
-
-.work {
-  width: 100%;
-}
-
-.work-card {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  padding: 8px;
-  background-color: var(--light-bg);
-  border-radius: 16px;
-}
-
-.work-card-crib {
-  width: 95%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 8px;
-  background-color: var(--light-bg);
-  border-radius: 16px;
-}
-
-.work-img-crib {
-  width: 100%;
-  height: 460px;
-  border-radius: 8px;
-  background-image: url(../assets/crib-work.png);
-  background-size: 100% auto;
-}
-
-.work-img-upstox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 400px;
-  border-radius: 8px;
-  background-image: url(../assets/upstox.png);
-  background-size: 100% auto;
-}
-
-.work-img-openhouse {
-  width: 100%;
-  height: 400px;
-  border-radius: 8px;
-  background-image: url(../assets/openhouse.png);
-  background-size: 100% auto;
-}
-
-.work-img-rovers {
-  width: 100%;
-  height: 400px;
-  border-radius: 8px;
-  background-image: url(../assets/rovers.png);
-  background-size: 100% auto;
-}
-
-.work-description {
-  height: 80px;
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.work-desc-text {
-  font-size: 1.25rem;
-  color: var(--text);
-  font-weight: 300;
-}
-
-#work-name {
-  font-weight: 550;
-  margin-right: 2px;
-  color: var(--text-dark);
-}
-
-.work-description i {
-  font-size: 2rem;
-  color: var(--text-light);
+  height: 300px;
 }
 
 .divider {
@@ -179,81 +86,45 @@ h1 {
 }
 
 .more {
-  width: 90%;
-  max-width: 1000px;
+  width: 100%;
+  height: auto;
   margin: auto;
-  margin-top: 120px;
   font-weight: 450;
-  font-size: 2.5rem;
+  background-color: var(--light-bg);
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.more p {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+  font-size: 3rem;
 }
 
 @media only screen and (max-width: 800px) {
-  .title {
+  .title-work {
     position: fixed;
     z-index: -1;
     width: 100%;
     margin: auto;
-    margin-bottom: 80px;
-    font-size: 2rem;
-    text-align: center;
-    color: #e0e0e0;
+    height: auto;
+    margin-bottom: -100px;
+    padding-top: 120px;
   }
 
-  .work-grid {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    max-width: 1000px;
-    justify-content: space-between;
+  h1 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-left: 8px;
+    font-size: 3rem;
+    width: 90%;
+    max-width: 1280px;
     margin: auto;
-    margin-top: 40px;
-  }
-
-  #upstox-card {
-    margin-top: 40px;
-  }
-
-  .blogs {
-    padding: 10px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .blog-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-box {
-    width: 95%;
-    max-width: 360px;
-    margin-top: 40px;
-    margin-right: 0.1px;
-  }
-
-  .blog-box-2 {
-    width: 95%;
-    max-width: 360px;
-    margin-top: 40px;
-  }
-
-  .work-img-crib {
-    display: flex;
-    width: 100%;
-    height: 320px;
-    border-radius: 8px;
-    background-image: url(../assets/crib-work.png);
-    background-size: auto 100%;
-    background-position-x: center;
-  }
-
-  .work-img-upstox {
-    height: 320px;
-    background-size: auto 100%;
-  }
-
-  .work-img-openhouse {
-    height: 320px;
-    background-size: auto 100%;
   }
 }

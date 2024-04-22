@@ -1,8 +1,5 @@
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@1,200,500,300,600,400,700&display=swap");
-@import url("https://use.typekit.net/zmy0cob.css");
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik:wght@400;500;600;700&display=swap");
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1,700,500,300,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gulzar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0px;
@@ -15,7 +12,7 @@
   --theme-light: #fdfdfd;
   --theme-blue: #e0e7f1;
 
-  --blue: #3b8eef;
+  --blue: #74b4fd;
 
   --pink: #fc466d;
   --pink-2: #ff7676;
@@ -46,19 +43,33 @@
 }
 
 body {
-  font-family: "General Sans", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   color: var(--text-dark);
+  background-color: #121213;
 }
 
 .space-big {
   width: 100%;
-  height: 200px;
+  height: 160px;
+}
+
+.section-header {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  color: var(--text-med);
+  font-weight: 600;
+  font-size: 6rem;
+  opacity: 0.4;
+  margin-bottom: 40px;
 }
 
 #about {
   margin-bottom: 120px;
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .filler {
@@ -67,182 +78,110 @@ body {
 }
 
 .hero {
-  width: 90%;
-  max-width: 1100px;
-  height: 550px;
-  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  height: 620px;
   background-image: url(../assets/me.jpg);
   background-size: 100% auto;
   border-radius: 8px;
 }
 
-.block {
+.about-text {
+  color: var(--text);
   width: 90%;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  margin-top: 75px;
-}
-
-.interests {
-  margin-top: 100px;
-}
-
-.interests-title {
-  width: 90%;
-  max-width: 700px;
-  margin: auto;
-  margin-bottom: 48px;
-  font-size: 2.5rem;
-  font-weight: 550;
-}
-
-.interests-text {
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.interests-title bold {
-  color: var(--text-light);
-}
-
-.small {
-  font-size: 2rem;
-  margin-bottom: -12px;
-}
-
-.about-desc {
-  margin-top: 6px;
-  width: 100%;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--text-med);
-  letter-spacing: 0.4px;
-}
-
-.supporting {
-  font-size: 0.9rem;
+  max-width: 720px;
+  margin-top: 60px;
 }
 
 #bold {
-  font-size: 1.25rem;
-  font-weight: 550;
-  color: var(--text-dark);
-  line-height: 1.5;
-  letter-spacing: -0.25px;
-}
-
-.mono-title {
-  font-family: "Gulzar", serif;
+  font-family: "Instrument Serif", serif;
+  color: var(--text-vlight);
   font-weight: 400;
-  width: 100%;
-  margin: auto;
-  margin-top: 16px;
-  max-width: 700px;
-  font-size: 2.5rem;
-  color: var(--text-dark);
-  line-height: 1;
-  margin-bottom: 24px;
+  font-size: 1.75rem;
+  letter-spacing: 0.25px;
+  margin-bottom: 40px;
+  line-height: 1.25;
 }
 
-.experiences {
+.about-desc {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-med);
+}
+
+.about-header {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 0.25px;
+  line-height: 1.25;
   margin-top: 80px;
 }
 
-.interests-block {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-  max-width: 700px;
+#learning {
+  color: var(--yellow-2);
+  margin-top: 120px;
 }
 
-.resume {
+#interests {
+  color: var(--blue);
+  margin-top: 120px;
+}
+
+#bucket {
+  color: #afebb2;
+  margin-top: 120px;
+}
+
+.text-block {
+  color: var(--text);
   width: 90%;
-  max-width: 700px;
-  padding: 32px 16px;
-  margin: auto;
+  max-width: 720px;
+  margin-top: 20px;
   font-size: 1.1rem;
-  color: var(--text-med);
-  margin-bottom: 24px;
-  border: 2px solid #ececec;
-  border-radius: 8px;
-}
-
-.resume a {
-  text-decoration: underline;
-  font-weight: 550;
-  color: var(--text-dark);
-}
-
-.exp-text {
-  font-weight: 350;
-  width: 90%;
-  margin: auto;
-  max-width: 700px;
   line-height: 1.5;
-  font-size: 1.1rem;
-  letter-spacing: 0.4px;
   color: var(--text-med);
 }
 
-.exp-text a {
+.text-block a {
   text-decoration: none;
-  color: var(--text-med-dark);
-  font-weight: 550;
+  color: var(--text);
 }
 
-.exp-text svg {
-  height: 30px;
-  margin-bottom: -8px;
-}
-
-.interests-row {
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 32px;
+  max-width: 960px;
+  margin-top: 40px;
+  column-gap: 60px;
+  row-gap: 60px;
 }
 
-.interest-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 220px;
-  height: 220px;
-  padding: 12px;
-  border: 2px solid #ececec;
-  border-radius: 8px;
+.interest-cell {
+  margin-top: 40px;
 }
 
-.main-text {
-  font-weight: 550;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+.interest-cell i {
+  font-size: 2.5rem;
+  color: #4c4c4c;
 }
 
-.emoji {
-  font-size: 2rem;
-}
-
-.bucket-section {
-  width: 90%;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 100px;
+.cell-text {
+  margin-top: 12px;
+  margin-left: 3px;
+  font-size: 1.15rem;
+  color: var(--text);
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 .bucket-list {
   width: 100%;
   max-width: 700px;
   margin: auto;
-  margin-top: 8px;
+  margin-top: 60px;
   margin-left: -28px;
   display: flex;
   flex-direction: row;
@@ -252,7 +191,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 320px;
+  width: 400px;
   margin-bottom: 24px;
 }
 
@@ -263,13 +202,13 @@ body {
 
 .bucket-row i {
   font-size: 1.5rem;
-  opacity: 0.3;
+  color: var(--text-light);
 }
 
 .bucket-row p {
   font-size: 1.15rem;
   margin-left: 8px;
-  color: var(--text-med);
+  color: var(--text);
 }
 
 #done {
@@ -277,67 +216,14 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-  .space-big {
+  .interest-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    height: 100px;
-  }
-
-  .mono-title {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 32px;
-  }
-
-  .hero {
-    width: 90%;
-    max-width: 1100px;
-    height: 400px;
-    margin: auto;
-    background-image: url(../assets/me.jpg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 8px;
-  }
-
-  .block {
-    width: 90%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
+    max-width: 960px;
     margin-top: 40px;
-  }
-
-  .header {
-    width: 100%;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: left;
-    margin-bottom: 24px;
-  }
-
-  .small {
-    font-size: 1.25rem;
-    margin-bottom: 1px;
-  }
-
-  .interests-row {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.1px;
-  }
-
-  .interests-text {
-    height: 70px;
-  }
-
-  .interest-box {
-    width: 100%;
-    height: 175px;
-    margin-top: 32px;
+    column-gap: 60px;
+    row-gap: 20px;
   }
 
   .bucket-list {
@@ -351,5 +237,17 @@ body {
 
   .bucket-row {
     width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 1100px;
+    height: 400px;
+    margin: auto;
+    background-image: url(../assets/me.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
   }
 }
