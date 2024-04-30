@@ -112,15 +112,52 @@ body {
   font-family: "Instrument Serif", serif;
   font-style: italic;
   color: var(--text-vlight);
-  font-weight: 700;
+  font-weight: 100;
   letter-spacing: 0.2px;
   margin-left: 8px;
-  font-size: 4.7rem;
+  font-size: 2.5rem;
+  margin-top: 20px;
 }
 
 .white-bg {
   width: 100%;
   height: 100vh;
+  background-color: #1b1b1b;
+}
+
+#text-anm {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .title {
@@ -130,13 +167,23 @@ body {
   max-width: 1280px;
   margin: auto;
   padding-top: 45vh;
+  line-height: 1.1;
+}
+
+#thin {
+  font-weight: 200;
+  font-size: 7.2rem;
+  letter-spacing: -3px;
+  color: var(--text-med);
+  margin-left: -4px;
+  line-height: 1;
 }
 
 .title p {
-  font-size: 4.5em;
-  font-weight: 550;
+  font-size: 7rem;
+  font-weight: 600;
   width: 100%;
-  max-width: 980px;
+  max-width: 1280px;
   display: block;
   color: var(--text-vlight);
 }
@@ -182,15 +229,15 @@ body {
 }
 
 .work-title {
-  font-size: 4.5rem;
+  font-size: 7rem;
   margin-top: 16px;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .work-title-light {
-  font-size: 4.5rem;
+  font-size: 7rem;
   margin-top: 16px;
-  font-weight: 550;
+  font-weight: 600;
   color: var(--text-vlight);
 }
 
@@ -214,7 +261,7 @@ body {
   width: 100%;
   max-width: 500px;
   height: 500px;
-  background-color: var(--grey-bg);
+  background-color: #eeeeee;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -266,9 +313,9 @@ body {
 }
 
 #collection {
-  width: 80%;
-  max-width: 280px;
-  margin-top: -360px;
+  width: 90%;
+  max-width: 360px;
+  margin-top: 136px;
   transition: 0.25s all ease-in;
   position: absolute;
   z-index: 1;
@@ -395,6 +442,7 @@ body {
   margin: auto;
   margin-left: 20px;
   margin-top: 120px;
+  cursor: url(../assets/cursor.png), pointer;
 }
 
 .modules-container img {
@@ -412,6 +460,7 @@ body {
   margin: auto;
   margin-left: 20px;
   margin-top: 120px;
+  cursor: url(../assets/cursor.png), pointer;
 }
 
 .milestones-container:hover img {
@@ -420,6 +469,7 @@ body {
   margin: auto;
   margin-left: 20px;
   margin-top: 120px;
+  cursor: url(../assets/cursor.png), pointer;
 }
 
 .milestones-container img {
@@ -434,7 +484,7 @@ body {
 .upstox-work-container {
   width: 100%;
   max-width: 1280px;
-  height: 600px;
+  height: 720px;
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
@@ -533,9 +583,60 @@ body {
   }
 }
 
+#knowcursor:hover {
+  cursor: url(../assets/cursor.png), pointer;
+}
+
+#sooncursor:hover {
+  cursor: url(../assets/sooncursor.png), pointer;
+}
+
+@media only screen and (max-width: 1320px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 50vh;
+    line-height: 1.1;
+  }
+
+  #thin {
+    font-weight: 200;
+    font-size: 5.1rem;
+    letter-spacing: -3px;
+    color: var(--text-med);
+    margin-left: -4px;
+    line-height: 1;
+  }
+
+  .title p {
+    font-size: 5rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 1280px;
+    display: block;
+    color: var(--text-vlight);
+  }
+
+  .work-title {
+    font-size: 5rem;
+    margin-top: 16px;
+    font-weight: 600;
+  }
+
+  .work-title-light {
+    font-size: 5rem;
+    margin-top: 16px;
+    font-weight: 600;
+    color: var(--text-vlight);
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .title {
-    padding-top: 25vh;
+    padding-top: 50vh;
   }
 
   #serif {
@@ -543,11 +644,21 @@ body {
   }
 
   .title p {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+  }
+
+  #thin {
+    font-weight: 200;
+    font-size: 2.75rem;
+    margin-left: -0.1px;
   }
 
   .work-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
+  }
+
+  .word {
+    font-size: 2.75rem;
   }
 
   .crib-work-row {
@@ -574,26 +685,17 @@ body {
   .crib-box-small {
     width: 100%;
     max-width: 500px;
-    height: 500px;
-    background-color: var(--grey-bg);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    cursor: url(../assets/cursor.png), pointer;
+    height: 400px;
   }
 
   .crib-box-small-1 {
     width: 100%;
     max-width: 500px;
     height: 360px;
-    background-color: var(--grey-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    cursor: url(../assets/cursor.png), pointer;
+  }
+
+  #collection {
+    margin-top: 100px;
   }
 
   .crib-box-small-1 img {
@@ -608,11 +710,6 @@ body {
     background-color: #eeeeee;
     border-radius: 8px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    cursor: url(../assets/cursor.png), pointer;
   }
 
   #crib-desktop:hover {

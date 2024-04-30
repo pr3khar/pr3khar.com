@@ -28,12 +28,12 @@ nav {
   background-color: rgba(30, 30, 30, 0.2);
   padding: 12px;
   gap: 16px;
-  border: 1px solid rgba(215, 215, 215, 0.4);
+  border: 1px solid rgba(136, 136, 136, 0.4);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  -webkit-box-shadow: 0px 5px 19px 0px rgba(215, 215, 219, 0.3);
-  -moz-box-shadow: 0px 5px 19px 0px rgba(215, 215, 219, 0.3);
-  box-shadow: 0px 5px 19px 0px rgba(215, 215, 219, 0.3);
+  -webkit-box-shadow: 0px 5px 19px 0px rgba(130, 130, 135, 0.3);
+  -moz-box-shadow: 0px 5px 19px 0px rgba(98, 98, 105, 0.3);
+  box-shadow: 0px 5px 19px 0px rgba(99, 99, 101, 0.3);
 }
 
 .cell {

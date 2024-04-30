@@ -145,9 +145,7 @@
 
 .case-study-soon {
   width: 100%;
-  max-width: 1080px;
-  margin: auto;
-  margin-top: 60px;
+  max-width: 480px;
   background-color: #eeeeee;
   font-size: 1.25rem;
   font-weight: 450;
@@ -156,6 +154,13 @@
   padding: 32px 20px 32px 20px;
   align-items: center;
   border-radius: 12px;
+}
+
+.button-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+  max-width: 1080px;
 }
 
 .case-study-soon i {

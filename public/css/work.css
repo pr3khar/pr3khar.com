@@ -430,11 +430,16 @@ body {
   border-radius: 12px;
 }
 
-.case-study-soon {
-  width: 90%;
-  max-width: 800px;
+.button-container {
+  width: 100%;
   margin: auto;
   margin-top: 60px;
+  max-width: 1080px;
+}
+
+.case-study-soon {
+  width: 100%;
+  max-width: 480px;
   background-color: #eeeeee;
   font-size: 1.25rem;
   font-weight: 450;
